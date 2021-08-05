@@ -1,0 +1,70 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 mx-auto text-center" style="margin-top: 30px; margin-bottom: 30px">
+            <h4 style="font-family: 'Indie Flower', cursive;color:#484848">Things I have built</h4>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 mx-auto">
+            <div class="card">
+                <img class="card-img-top img-fluid"
+                     src="{% static 'myapp/images/work.jfif' %}"
+                     alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">The greatest wealth is health. Virgil</h4>
+                    <p class="card-text">
+                        This is my startup whose aim is help to be fit to achieve success. Goal is to help you understand that how our diet and workout should be at what
+                        age... moreankita99@gmail.com
+                    </p>
+                    <a target="_blank"
+                       href="https://www.venturecenter.co.in/nationalmissions/2015/10/31/swasthya-bharat-healthy-india/"
+                       >Visit the Website</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3 mx-auto">
+            <div class="card">
+                <img class="card-img-top img-fluid"
+                     src="{% static 'myapp/images/berry.jfif' %}"
+                     alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">What is Considered “Healthy Food”?</h4>
+                    <p class="card-text">
+                        Do you ever find it difficult to determine if your favorite foods are actually healthy for you?
+                        Take Dr.Jyoti Kanhurkar's Diet and workout prescription jyotikanhurkar40@gmail.com
+                    </p>
+                    <a target="_blank" href="http://www.unopinion.com" >Visit the Website</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3 mx-auto">
+            <div class="card">
+                <img class="card-img-top img-fluid"
+                     src="{% static 'myapp/images/15 looks para te inspirar na hora de fazer exercícios.jfif' %}"
+                     alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">5 Tips for Living a Long and Healthy Life</h4>
+                    <p class="card-text">
+                        Everyone strives to be the best version of themselves that they can be, but with all the
+                        information out there, our thought process can get overloaded, leaving us more confused than
+                        ever. With these five, scientifically-backed tips, you can be sure to put your best foot
+                    </p>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=YNsuneGBsMY" >Visit the Website</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

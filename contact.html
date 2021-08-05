@@ -1,0 +1,76 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<style>
+.btn{
+margin-left:120px;
+display:block;
+height:40px;
+line-height:28px;
+text-align:center;
+background:black;
+border-radius:25px;
+color:#fff;
+text-transform:uppercase;
+cursor:pointer;
+}
+
+.form-control{
+background: #cfccc6;
+border-style: ridge;
+border-width: 2px;
+}
+
+
+.container-contact{
+margin-top:50px;
+margin-left:20%;
+border-style: ridge;
+background: #dedbd5;
+padding:10px;
+text-align:center;
+width:800px;
+}
+
+.container-contact label{
+font-size:15px;
+margin-right: 60px;
+color: black;
+text-transform: uppercase;
+font-weight: bold;
+}
+</style>
+
+<div class="container-contact">
+    <div class="row">
+        <div class="col-sm-6 mx-auto" style="margin-top: 70px">
+            <form action="{% url 'contact' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <label for="example-email-input" class="col-2 col-form-label">Email</label>
+                    <div class="col-10">
+                        <input name="email" class="form-control" type="email" id="example-email-input">
+                    </div>
+                </div><br>
+                <div class="form-group row">
+                    <label for="example-email-input" class="col-2 col-form-label">Subject</label>
+                    <div class="col-10">
+                        <input name="subject" class="form-control" type="text">
+                    </div>
+                </div><br>
+                <div class="form-group row">
+                    <label for="example-email-input" class="col-2 col-form-label">Message</label>
+                    <div class="col-10">
+                        <textarea name="message" class="form-control"></textarea>
+                    </div>
+                </div><br>
+                <div class="pull-right">
+                    <button type="submit" class="btn btn-primary float-right">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

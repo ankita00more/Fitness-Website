@@ -1,0 +1,257 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+body {
+background-color: white;
+}
+
+.main1 {
+font-family:serif;
+text-align: center;
+margin-top:30px;
+font-weight: 900;
+border-style: ridge;
+border-width: 5px;
+}
+
+.first {
+font-family:serif;
+font-weight: 900;
+font-size: 20px;
+text-align: center;
+margin-top:30px;
+width:95%;
+}
+
+img {
+width:40%;
+margin-left:70px;
+}
+
+.second {
+margin-left:70px;
+font-weight:600;
+font-size: 25px;
+font-family:serif;
+}
+
+.main2 {
+margin-left:70px;
+font-family:serif;
+font-weight:900;
+font-size: 25px;
+margin-top:40px;
+}
+
+span {
+float:right;
+width:40%;
+font-family:serif;
+font-weight: 900;
+font-size: 20px;
+}
+.container-one{
+float:right;
+width:40%;
+border-style: ridge;
+background: rgba(0,0,0,0.6);
+padding:10px;
+text-align:center;
+}
+
+b{
+font-size: 35px;
+margin-bottom: 30px;
+}
+
+.container-one h6 {
+font-size: 20px;
+color: white;
+text-transform: uppercase;
+letter-spacing: 2px;
+border-style: ridge;
+border-width: 5px;
+text-align:center;
+}
+input{
+background: #cfccc6;
+}
+.container-one p{
+color: white;
+text-transform: uppercase;
+font-weight: bold;
+}
+.radio + .radio{
+margin-left:20px;
+}
+
+.container-one label{
+text-align: left;
+color: white;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+.btn{
+margin-left:80px;
+display:block;
+height:40px;
+line-height:28px;
+text-align:center;
+background:black;
+border-radius:25px;
+color:#fff;
+text-transform:uppercase;
+cursor:pointer;
+}
+
+.container-two{
+margin-top:50px;
+}
+
+
+
+</style>
+<h1 class="main1">MAKE FITNESS YOUR FAVOURITE HABIT</h1>
+<p class="first">Understanding the benefits of physical fitness and knowing how active you should be can help you
+    maintain good health
+    and improve your overall quality of life.Staying active and healthy allows you to do activities that require a
+    certain level of physical fitnessEncourage your family to be more active, and challenge yourself to meet daily or
+    weekly physical activity goals.</p>
+
+<h2 class="main2">Top 10 Benefits of Physical Activity And A Healthy Diet</h2>
+<span><b>Physical activity - it's important.</b><br>Numerous studies have shown that regular physical activity increases life expectancy and reduces the risk of
+    premature mortality. There’s not a magic formula that translates hours of physical activity into hours of life
+    gained, but research suggests that people who are more active tend to be healthier and tend to live longer.Regular
+    exercise and physical activity increase muscle strength, bone density, flexibility, and stability. Physical fitness
+    can reduce your risk for and resilience to accidental injuries, especially as you get older. For example, stronger
+    muscles and better balance mean that you’re less likely to slip and fall, and stronger bones mean that your less
+    likely to suffer bone injuries should you take a tumble.</span>
+
+<img src="{% static 'myapp/images/chakrasan.png' %}" alt="...">
+<h2 class="main2">Make physical activity a priority to:</h2>
+
+<div class="container-one">
+    <div class="row">
+        <div class="col-sm-6 mx-auto">
+            <form action="{% url 'home' %}" method="post">
+                {% csrf_token %}
+                <h6>Registration Form</h6>
+                <div class="form-group row">
+                    <label for="example-email-input">Firstname:</label>
+                    <div class="col-10">
+                        <input name="firstname" type="text">
+                    </div>
+                </div>
+                <br>
+
+                <div class="form-group row">
+                    <label for="example-email-input">Lastname:</label>
+                    <div class="col-10">
+                        <input name="lastname" type="text">
+                    </div>
+                </div>
+                <br>
+
+                <div class="form-group row">
+                    <label for="example-email-input">E-mail:</label>
+                    <div class="col-10">
+                        <input name="email" type="email" id="example-email-input">
+                    </div>
+                </div>
+                <br>
+                <div class="radio-group">
+                    <p>Please select your Gender:</p>
+
+                    <label class="radio">
+                        <input class="gender" type="radio" id="ge1" name="gender" value="Male">
+                        Male
+                        <span></span>
+                    </label>
+                    <label class="radio">
+                        <input class="gender" type="radio" id="ge2" name="gender" value="Female">
+                        Female
+                        <span></span>
+                    </label>
+                </div>
+                <br>
+
+                <div>
+                    <button class="btn" type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<p class="second">1.Improve your memory and brain function (all age groups).<br>
+    2.Protect against many chronic diseases.<br>
+    3.Aid in weight management.<br>
+    4.Lower blood pressure and improve heart health.<br>
+    5.Improve your quality of sleep.<br>
+    6.Reduce feelings of anxiety and depression.<br>
+    7.Combat cancer-related fatigue.<br>
+    8.Improve joint pain and stiffness.<br>
+    9.Maintain muscle strength and balance.<br>
+    10.Increase life span.</p>
+<!--<img src="{% static 'myapp/images/berry.jfif' %}" class="rounded float-end" alt="..."width="200" height="200">-->
+<br>
+<div class="container-two">
+    <div class="row">
+        <div class="col-sm-3 mx-auto">
+            <div class="card">
+                <img class="card-img-top img-fluid"
+                     src="{% static 'myapp/images/work.jfif' %}"
+                     alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">The greatest wealth is health.</h4>
+                    <p class="card-text">
+                        This is my startup whose aim is help to be fit to achieve success. Goal is to help you understand that how our diet and workout should be at what
+                        age... moreankita99@gmail.com
+                    </p>
+                    <a target="_blank"
+                       href="https://www.venturecenter.co.in/nationalmissions/2015/10/31/swasthya-bharat-healthy-india/"
+                       >Visit the Website</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3 mx-auto">
+            <div class="card">
+                <img class="card-img-top img-fluid"
+                     src="{% static 'myapp/images/berry.jfif' %}"
+                     alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">What is Considered “Healthy Food”?</h4>
+                    <p class="card-text">
+                        Do you ever find it difficult to determine if your favorite foods are actually healthy for you?
+                        Take Dr.Jyoti Kanhurkar's Diet and workout prescription jyotikanhurkar40@gmail.com
+                    </p>
+                    <a target="_blank" href="http://www.unopinion.com" >Visit the Website</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3 mx-auto">
+            <div class="card">
+                <img class="card-img-top img-fluid"
+                     src="{% static 'myapp/images/15 looks para te inspirar na hora de fazer exercícios.jfif' %}"
+                     alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">5 Tips for Living a Long and Healthy Life</h4>
+                    <p class="card-text">
+                        Everyone strives to be the best version of themselves that they can be, but with all the
+                        information out there, our thought process can get overloaded, leaving us more confused than
+                        ever. With these five, scientifically-backed tips, you can be sure to put your best foot
+                    </p>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=YNsuneGBsMY" >Visit the Website</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 mx-auto" style="margin-top: 70px">
+            <form action="{% url 'male' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <h4>Registered Successfully!!Males</h4>
+                    <p>Select your age group</p>
+                    <select class="option" name="age">
+                        <option disabled="disabled" selected="selected">--Choose Option</option>
+                        <option value="18-35">18-35</option>
+                        <option value="36-55">36-55</option>
+                        <option value="More than 55">More than 55</option>
+                    </select>
+                </div><br>
+                <div class="pull-right">
+                    <button type="submit" class="btn btn-primary float-right">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
